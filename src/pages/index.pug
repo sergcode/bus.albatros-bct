@@ -1,0 +1,234 @@
+extends ../templates/layouts/default
+block vars
+  -
+    title = 'Home'
+    stylePath=''
+block content
+
+  section.content.content__header.content__padding
+    .container
+      .row.justify-content-sm-center.justify-content-lg-end
+        .col-sm-12.col-lg-8
+          h1.theme__pb-2.wow.fadeInRight.titleUtmBig АРЕНДА АВТОБУСА,
+            br
+            | МИКРОАВТОБУСА, МИНИВЭНА С
+            br
+            | ВОДИТЕЛЕМ ОТ 8 ДО 60 МЕСТ
+
+          p.titleUtmSmall.theme__pb-2.white-color.wow.fadeInRight(data-wow-delay='0.3s') Аренда комфортных автобусов и микроавтобусов для корпоративных и частных клиентов по РФ
+
+          .content.content__header-block.wow.flipInX(data-wow-delay='0.6s')
+            h2 Получите расчет стоимости аренды автотранспорта
+            p.font-md.theme__pb-1 Подберем лучший вариант для ваших целей и бюджета в течение 5 минут
+            a.button.button__lg_orange(href='#showquiz') Получить расчет
+
+
+  section.content.content__map.content__padding
+    .container
+      h2.theme__pb-1.wow.fadeInUp(data-wow-delay='1s') Почему мы?
+      p#why-we.blue-text-color.font-md.theme__pb-5.wow.fadeInUp(data-wow-delay='0.3s') Для любых целей и мероприятий в России и зарубежом
+
+      .row
+        .col-sm-12.col-lg-6
+          .content__map_grid
+            .content__number.wow.fadeInUp
+              span.counter.counter__theme(data-counterup-time='1000', data-counterup-delay='25') 250
+              span.counter__theme +
+              p.font-md
+                | Городов
+                br
+                | обслуживания
+
+            .content__number.wow.fadeInUp(data-wow-delay='0.3s')
+              span.counter.counter__theme(data-counterup-time='1200', data-counterup-delay='35') 2000
+              span.counter__theme +
+              p.font-md
+                | Корпоративных
+                br
+                | клиентов
+
+            .content__number.wow.fadeInUp(data-wow-delay='0.5s')
+              span.counter.counter__theme(data-counterup-time='1400', data-counterup-delay='45') 10
+              p.font-md
+                | Классов
+                br
+                | автотранспорта
+
+            .content__number.wow.fadeInUp(data-wow-delay='0.7s')
+              span.counter.counter__theme(data-counterup-time='1600', data-counterup-delay='55') 6000
+              span.counter__theme +
+              p.font-md
+                | Пассажиров
+                br
+                | ежемесячно
+
+        .col-sm-12.col-lg-6
+          .content__ul_grid
+            ul.wow.fadeInUp(data-wow-delay='0.9s')
+              li
+                span Трансфер
+              li
+                span Выезды
+              li
+                span Междугородние поездки
+              li
+                span Гастрольные туры
+              li
+                span Корпоративные мероприятия
+              li
+                span Перевозка сотрудников
+
+            ul.wow.fadeInUp(data-wow-delay='1.1s')
+              li
+                span Спортивные мероприятия
+              li
+                span Экскурсии
+              li
+                span Забросы туристических групп
+              li
+                span Международные перевозки
+              li
+                span Свадьбы
+              li
+                span Шопинг-туры и т.д.
+
+
+
+
+
+
+  section.content.content__grey.content__padding
+    .container
+      h2.theme__pb-1.wow.fadeInUp Выберите подходящий вариант
+      p#bus-selection.blue-text-color.font-md.theme__pb-5.wow.fadeInUp(data-wow-delay='0.3s') В наличии модели эконом, повышенной комфортности и VIP&nbsp;
+        span без посредников
+
+      .row.justify-content-center.mb-5
+        include ../templates/mixins/tariffs/tariffs
+
+      h2.title-line.theme__pb-3.wow.fadeInUp ВОСПОЛЬЗУЙТЕСЬ ДОПОЛНИТЕЛЬНЫМИ ОПЦИЯМИ
+      .row.justify-content-around.mb-5
+        .col-6.col-sm-6.col-md-4.col-lg-2.wow.fadeInUp(data-wow-delay='0.5s')
+          article
+            figure
+              p
+                include ../templates/mixins/dop.options/guide
+
+              figcaption.text__normal-bold.blue-text-color Гид
+
+        .col-6.col-sm-6.col-md-4.col-lg-2.wow.fadeInUp(data-wow-delay='0.7s')
+          article
+            figure
+              p
+                include ../templates/mixins/dop.options/car
+
+              figcaption.text__normal-bold.blue-text-color Багажник
+
+        .col-6.col-sm-6.col-md-4.col-lg-2.wow.fadeInUp(data-wow-delay='0.9s')
+          article
+            figure
+              p
+                include ../templates/mixins/dop.options/caravan
+
+              figcaption.text__normal-bold.blue-text-color Прицеп
+
+        .col-6.col-sm-6.col-md-4.col-lg-2.wow.fadeInUp(data-wow-delay='1.1s')
+          article
+            figure
+              p
+                include ../templates/mixins/dop.options/chair
+
+              figcaption.text__normal-bold.blue-text-color Детские кресла
+
+        .col-6.col-sm-6.col-md-4.col-lg-2.wow.fadeInUp(data-wow-delay='1.3s')
+          article
+            figure
+              p
+                include ../templates/mixins/dop.options/cooler
+
+              figcaption.text__normal-bold.blue-text-color Кондиционер
+
+        .col-6.col-sm-6.col-md-4.col-lg-2.wow.fadeInUp(data-wow-delay='1.5s')
+          article
+            figure
+              p
+                include ../templates/mixins/dop.options/water-bottle
+
+              figcaption.text__normal-bold.blue-text-color Вода
+
+      h2.title-line.theme__pb-2.wow.fadeInUp(data-wow-delay='1s') КАК ЗАКАЗАТЬ АВТОБУС?
+      p#how-order.blue-text-color.font-md.theme__pb-4.wow.fadeInUp(data-wow-delay='1.3s') Мы упростили процедуру заказа до 4-х этапов
+
+      .row.justify-content-around
+        ul.list-step.clear
+          li.wow.animate.fadeIn(data-wow-delay='.4s')
+            p.number 1.
+            .list-step__block
+              span Оформите заявку
+              p
+                | На основе ваших пожеланий
+                br
+                |  и задач специалист подберет
+                br
+                |  лучший вариант
+            a.button.button__md_orange(href='#showquiz', data-title-form='Оформите заявку', data-form='Оставить заявку (шаг 1)')
+                | оставить заявку
+          li.wow.animate.fadeIn(data-wow-delay='.8s')
+            p.number 2.
+            .list-step__block
+              span Подберите вариант
+              p
+                | Мы предоставляем несколько
+                br
+                |  вариантов. Вы выбираете
+                br
+                |  подходящий
+            a.button.button__md_orange(href='#showquiz', data-title-form='Подберите вариант', data-form='Подобрать вариант (шаг 2)')
+              | Подобрать вариант
+          li.wow.animate.fadeIn(data-wow-delay='1.2s')
+            p.number 3.
+            .list-step__block
+              span Получите расчет
+              p
+                | Внесите предоплату
+                br
+                |  для бронирования автобуса
+                br
+                |  любым удобным способом
+            a.button.button__md_orange(href='#showquiz', data-title-form='Получите расчет', data-val-button='Получить расчет', data-form='Получите расчет (шаг 3)')
+              | Получить расчет
+          li.wow.animate.fadeIn(data-wow-delay='1.6s')
+            p.number 4.
+            .list-step__block
+              span Выезд в назначенное время
+              p
+                | Автобус с водителем будет
+                br
+                | вас ждать по указанному адресу
+                br
+                | и в назначенное время
+            p.success Счастливого пути!
+          .list-step__bg.wow.fadeIn(data-wow-delay='2s')
+
+  section.content.content__blue.content__padding
+    .container
+      .row.justify-content-sm-center.justify-content-lg-end
+        .col-sm-12.col-lg-6
+          h2#submit-application.white-color.theme__pb-2.wow.fadeInRight ОСТАВЬТЕ ЗАЯВКУ
+            br
+            | НА ПОДБОР ТРАНСПОРТА
+          p.theme__pb-2.white-color.wow.fadeInRight(data-wow-delay='0.3s') Подберем лучший вариант для ваших целей и бюджета
+
+          include ../templates/includes/form/form
+
+  section.content.content__grey.content__padding
+    .container
+      h2#reviews.theme__pb-4.wow.fadeInUp(data-wow-delay='0.3s') ОЗНАКОМЬТЕСЬ С БЛАГОДАРСТВЕННЫМИ ПИСЬМАМИ
+        br
+        | И ОТЗЫВАМИ НАШИХ КЛИЕНТОВ
+
+      include ../templates/includes/owl.carousel.message/owlcarousel
+
+
+
+

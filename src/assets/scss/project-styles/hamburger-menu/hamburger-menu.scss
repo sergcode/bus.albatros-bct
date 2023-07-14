@@ -1,0 +1,73 @@
+
+/* Icon 1 */
+/* Icon 3*/
+/* Icon 4 */
+.animated-icon1 {
+  width: 30px;
+  height: 20px;
+  position: relative;
+  margin: 0;
+  transform: rotate(0deg);
+  transition: .5s ease-in-out;
+  cursor: pointer;
+  span {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+    background: $color-white;
+    &:nth-child(1) {
+      top: 0;
+    }
+    &:nth-child(2) {
+      top: 10px;
+    }
+    &:nth-child(3) {
+      top: 20px;
+    }
+  }
+}
+
+.animated-icon1.open {
+  span {
+    &:nth-child(1) {
+      top: 11px;
+      transform: rotate(135deg);
+    }
+    &:nth-child(2) {
+      opacity: 0;
+      left: -60px;
+    }
+    &:nth-child(3) {
+      top: 11px;
+      transform: rotate(-135deg);
+    }
+  }
+}
+
+
+.bg__menu {
+
+  background: $color-black-rgba-two;
+  width: 0;
+  height: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity .5s ease;
+
+  &.active {
+
+    width: 100%;
+    opacity: 1;
+
+  }
+
+}

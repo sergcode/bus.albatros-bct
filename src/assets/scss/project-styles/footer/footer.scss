@@ -1,0 +1,261 @@
+.footer {
+
+  padding: 50px 0;
+  background-color: #fff;
+
+  .logo {
+
+    fill: $blue-color-seven;
+
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+
+    @media only screen and (max-width: 1150px) {
+      justify-content: space-around;
+      flex-wrap: wrap
+    }
+  }
+
+  &__grid {
+
+    @media only screen and (max-width: 992px) {
+
+      br {
+
+        display: none;
+
+      }
+    }
+
+    @media only screen and (max-width: 768px) {
+      grid-template-columns: 45% 45%;
+      grid-template-rows: 0 0 0 0 0;
+    }
+
+    @media only screen and (max-width: 530px) {
+      text-align: left;
+    }
+
+    @media only screen and (max-width: 500px) {
+      display: block;
+      text-align: center;
+    }
+
+  }
+
+  &__item {
+
+
+    @media only screen and (max-width: 992px) {
+      .pb-4 {
+        display: none;
+      }
+    }
+
+    @media only screen and (max-width: 576px) {
+      text-align: center;
+    }
+
+    &:nth-child(2),
+    &:nth-child(3) {
+
+      @media only screen and (max-width: 1150px) {
+        padding-top: 0
+      }
+
+    }
+
+  }
+
+  &__padding {
+
+    @media only screen and (min-width: 280px) {
+      padding-top: 100px;
+    }
+
+  }
+
+  &__between {
+
+    @media only screen and (max-width: 530px) {
+      justify-content: center;
+    }
+
+  }
+
+  &__caption {
+    margin: 15px 0;
+    font: 20px 'ArimoBold', sans-serif;
+    color: #0d3a50
+  }
+
+  &__text {
+    margin: 2.5px 0;
+    font-size: 14px;
+    color: #758a94;
+    display: block;
+
+    @media only screen and (max-width: 500px) {
+      display: block;
+      line-height: 2em;
+    }
+  }
+
+  &__text-margin {
+    margin-top: 15px
+  }
+
+  &__polit {
+    display: block;
+    width: 260px;
+    margin-top: 20px;
+    font: 16px 'ArimoBold', sans-serif;
+    color: #0d3a50;
+
+    @media only screen and (max-width: 576px) {
+      width: 100%;
+    }
+  }
+
+  &__payments {
+    max-width: 200px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+
+    @media only screen and (max-width: 576px) {
+      margin: auto;
+    }
+  }
+
+  &__payment1 {
+    width: 91px;
+    height: 55px;
+    background: url("../img/footer/payment1.png") no-repeat center
+  }
+
+  &__payment2 {
+    width: 80px;
+    height: 52px;
+    background: url("../img/footer/payment2.png") no-repeat center
+  }
+
+  &__phonesicon {
+    display: inline-flex;
+    align-items: center;
+
+    a {
+      font-size: 14px;
+      color: #758a94;
+    }
+  }
+
+  .icon-phone {
+    width: 23px;
+    height: 23px;
+    margin: 0 2px;
+    background-color: #758a94;
+    -webkit-border-radius: 50%;
+    border-radius: 50%
+  }
+
+  .icon-telegram {
+    margin-left: 5px;
+    background: #758a94 url(../img/icons/telegram.png) no-repeat center left 4px
+  }
+
+  .icon-whatsapp {
+    background: #758a94 url(../img/icons/whatsapp.png) no-repeat center left 4px
+  }
+
+  .icon-viber {
+    background: #758a94 url(../img/icons/viber.png) no-repeat center left 5px
+  }
+
+  &__number {
+    font-size: 20px;
+    color: #0d3a50
+  }
+
+  &__question {
+    margin-top: 10px;
+    display: inline-block;
+    font-size: 14px;
+    color: #0d3a50;
+    border-bottom: 1px solid #0d3a50
+  }
+
+  &__caption2 {
+    margin-top: 10px;
+    font: 14px 'ArimoBold', sans-serif;
+    color: #758a94
+  }
+
+  &__link {
+    display: block;
+    cursor: pointer;
+    transition: .3s;
+
+    &:hover {
+      color: #0d3a50
+    }
+  }
+
+}
+
+.footer-social {
+  display: flex;
+  max-width: 200px;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
+  @media only screen and (max-width: 576px) {
+    margin: 0 auto 30px;
+  }
+
+  &__item {
+    display: flex;
+    width: 30px;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    background: #758a94;
+    color: #fff;
+    transition: .3s;
+
+    &:hover {
+      background: #0d3a50;
+      color: #fff
+    }
+  }
+
+}
+
+.footer-nav  {
+
+  a{
+    display: block;
+    cursor: pointer;
+    transition: .3s;
+    margin: 2.5px 0;
+    font-size: 14px;
+    color: #758a94;
+    padding: 0;
+    border: 0;
+
+    &:last-child{
+      border: none;
+    }
+
+    &:hover {
+      color: #0d3a50;
+    }
+  }
+
+}

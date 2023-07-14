@@ -1,0 +1,30 @@
+.form.style-form.mt-auto.clear.wow.animate.fadeIn(data-wow-delay='.4s', data-wow-duration='.5s')
+  form#formRequest.clear.form__theme(name='formRequest', method='post', action='')
+    .line-1.wow.fadeInUp(data-wow-delay='0.5s')
+      label(for='formName') Ваше имя
+      input#formName(
+        type='text',
+        pattern='^[a-zA-ZА-Яа-яЁё ]+$',
+        title='Имя может содержать только буквы.',
+        required='',
+        placeholder='Имя',
+        name='username',
+        onchange="EnableButton()"
+        )
+    .line-1.wow.fadeInUp(data-wow-delay='0.7s')
+      label(for='mob_tel') Ваш телефон
+      input#mob_tel.inputmask(
+        type='tel',
+        required='',
+        placeholder='Телефон',
+        name='phone',
+        onchange="EnableButton()"
+        )
+    input#disable_button.button.button__lg_orange.wow.fadeInUp(
+      type='submit',
+      onclick="yaCounter39202165.reachGoal('podbor-bus'); return true;",
+      value='Подобрать автобус',
+      name="disable_button",
+      data-wow-delay='0.9s'
+      )
+

@@ -1,0 +1,299 @@
+.content {
+
+  position: relative;
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  &__header {
+
+    @include flex-center();
+    background: url('/assets/img/header/bg_slider.jpg') no-repeat center / cover fixed;
+    margin-top: 100px;
+
+    @media only screen and (min-width: 280px) and (max-width: 991.98px) {
+
+      margin-top: 0;
+
+    }
+
+    @media only screen and (max-width: 279.98px) {
+
+      margin-top: 0;
+
+    }
+
+    h1 {
+
+      @include media-breakpoint-down(md) {
+
+        margin-top: 20px;
+
+      }
+
+    }
+
+    p {
+
+      @include media-breakpoint-down(sm) {
+
+        text-align: center;
+
+      }
+
+    }
+
+  }
+
+  &__padding {
+
+    padding: 78px 0;
+
+    @media only screen and (max-width: 279.98px) {
+      padding-bottom: 20px;
+    }
+
+  }
+
+  &__header-block {
+
+    width: 100%;
+    @include flex-center();
+    text-align: center;
+    padding: 44px 17%;
+    border-radius: 3px;
+    justify-content: center;
+    overflow: hidden;
+    background: url('/assets/img/header/bg_slider.jpg') no-repeat center / cover fixed;
+    box-shadow: -2px 2px 2px $color-black-rgba-three;
+
+    &:before {
+
+      content: '';
+      display: block;
+      background: inherit;
+      position: absolute;
+      width: 100vw;
+      height: 100vh;
+      top: auto;
+      left: auto;
+      z-index: 0;
+      filter: blur(10px);
+      box-shadow: inset 0 0 0 1000px rgba(255, 255, 255, 0.5);
+
+    }
+
+    h2 {
+
+      color: $blue-color-two;
+      padding-bottom: 1rem;
+      z-index: 1000;
+
+    }
+
+    p {
+
+      z-index: 1000;
+
+    }
+
+    @media only screen and (max-width: 360px) {
+
+      padding-left: 8%;
+      padding-right: 8%;
+
+    }
+
+  }
+
+  &__map {
+
+    @include flex-center();
+    justify-content: center;
+    background: $color-white url('/assets/img/content/number/map.jpg') no-repeat top 4em left / 60%;
+    text-align: center;
+
+    @include media-breakpoint-down(sm) {
+
+      background-size: 100%;
+
+    }
+
+    h2 {
+
+      text-transform: uppercase;
+
+    }
+
+    &_grid {
+
+      display: grid;
+      grid-template-columns: 50% 50%;
+      grid-gap: 3rem 3rem;
+
+      @media only screen and (max-width: 992px) {
+
+        margin-bottom: 3rem;
+
+        br {
+
+          display: none;
+
+        }
+      }
+
+      @media only screen and (max-width: 768px) {
+        grid-template-columns: 45% 45%;
+        grid-template-rows: 5rem 0 0 0 0;
+      }
+
+      @media only screen and (max-width: 530px) {
+        text-align: left;
+      }
+
+      @media only screen and (max-width: 460px) {
+        display: block;
+        text-align: center;
+      }
+
+    }
+
+  }
+
+  &__number {
+
+    text-align: left;
+
+    @include media-breakpoint-down(sm) {
+
+      text-align: center;
+
+    }
+
+    @media only screen and (max-width: 460px) {
+
+      text-align: center;
+      margin-bottom: 20px;
+
+    }
+
+  }
+
+  &__ul {
+
+    &_grid {
+
+      display: grid;
+      grid-template-columns: 50% 50%;
+      grid-gap: 3rem 3rem;
+      text-align: left;
+
+      @include media-breakpoint-down(sm) {
+
+        grid-template-columns: 100%;
+        text-align: center;
+        grid-gap: 0;
+
+      }
+
+      ul {
+
+
+        li {
+          list-style-position: outside;
+
+          &:before {
+
+            content: '';
+            display: inline-block;
+            height: 8px;
+            width: 8px;
+            vertical-align: middle;
+            border-radius: 50%;
+            background-color: $orange-color-one;
+            margin-right: 15px;
+
+          }
+
+          span {
+
+            color: $color-black-three;
+
+          }
+
+          line-height: 3.5em;
+
+        }
+
+      }
+
+    }
+
+  }
+
+  &__grey {
+
+    text-align: center;
+    width: 100%;
+    background: $color-grey-eight url("/assets/img/content/background/bg_new.png")no-repeat center top / cover;
+
+    h2 {
+
+      text-transform: uppercase;
+
+    }
+
+    p {
+
+      span {
+
+        font-weight: 800;
+
+      }
+
+    }
+
+    article {
+
+      @include media-breakpoint-down(md) {
+
+        padding-bottom: 30px;
+
+      }
+
+      p {
+
+        padding-bottom: 20px;
+
+      }
+
+    }
+
+  }
+
+  &__blue {
+
+    background: $blue-color-two url("/assets/img/content/higer_scania_touring_hd_6x2.png")no-repeat left 4rem center / 45%;
+
+    @include media-breakpoint-down(md) {
+
+      background: $blue-color-two;
+
+      p, h2 {
+
+        text-align: center;
+
+      }
+
+    }
+
+    p {
+
+      margin-bottom: 1rem;
+
+    }
+
+
+  }
+
+
+}

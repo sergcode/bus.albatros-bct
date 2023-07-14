@@ -1,0 +1,52 @@
+header
+  // Navbar
+
+  nav.navbar.navbar__theme.navbar-expand-lg.navbar-dark.fixed-top.scrolling-navbar.navbar-after
+    .container
+      a.navbar-brand.navbar-brand__theme.d-lg-none(href='https://bus.albatroc.com/', title='Логотип Bus Albatroc')
+        img.logo(src='/assets/img/header/logo.png')
+
+      ul.navbar-nav.navbar-nav__tablet
+        li.nav-item.nav-item__prl.d-none.d-md-flex.d-lg-none
+          include ../../templates/mixins/header/mail
+          a.nav-link.nav-link__hover(href='mailto:info-bus@albatroc.com') info-bus@albatroc.com
+        li.nav-item.nav-item__prl.nav-item_d-xs-none
+          include ../../templates/mixins/header/phone
+          a.nav-link.nav-link__hover(href='tel:88002003338') 8 (800) 200-33-38
+      button.navbar-toggler.first-button(type='button', data-toggle='collapse', data-target='#navbarSupportedContent20', aria-controls='navbarSupportedContent20', aria-expanded='false', aria-label='Toggle navigation')
+        .animated-icon1
+          span
+          span
+          span
+
+      #navbarSupportedContent20.collapse.navbar-collapse.flex-wrap.navbar-collapse__tablet.d-flex.flex-wrap
+
+        .blue-bg__menu.order-2.order-sm-2.order-md-2.order-lg-1
+          a.navbar-brand.navbar-brand__theme(href='https://bus.albatroc.com/', title='Логотип Bus Albatroc')
+            include ../../templates/mixins/header/logo
+          ul.navbar-nav.m-auto
+            li.nav-item.nav-item__prl.d-sm-flex.d-md-none.d-lg-flex.nav-item__email
+              include ../../templates/mixins/header/mail
+              a.nav-link.nav-link__hover(href='mailto:info-bus@albatroc.com') info-bus@albatroc.com
+            li.nav-item.nav-item__prl
+              include ../../templates/mixins/header/ballon
+              a.nav-link.nav-link__hover(href='#') Кемерово
+            li.nav-item.nav-item__prl.nav-item__tablet_d-none.nav-item__tablet_d-xs-flex
+              include ../../templates/mixins/header/phone
+              a.nav-link.nav-link__hover(href='tel:88002003338') 8 (800) 200-33-38
+          a.button.button__sm_orange(href='#showquiz') Рассчитать стоимость
+
+        .grey-bg.order-1.order-sm-1.order-md-1.order-lg-2
+          ul.navbar-nav.navbar-nav__theme.m-auto
+            li.nav-item
+              a.nav-link.nav-link__blue(href='#why-we') Почему мы
+            li.nav-item
+              a.nav-link.nav-link__blue(href='#bus-selection') Выбор автобуса
+            li.nav-item
+              a.nav-link.nav-link__blue(href='#how-order') Как заказать
+            li.nav-item
+              a.nav-link.nav-link__blue(href='#submit-application') Оставить заявку
+            li.nav-item
+              a.nav-link.nav-link__blue(href='#reviews') Отзывы
+            li.nav-item
+              a.nav-link.nav-link__blue(href='#contacts') Контакты

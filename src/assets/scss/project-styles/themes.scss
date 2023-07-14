@@ -1,0 +1,746 @@
+//white
+$color-white: #fff;
+
+//white-rgba
+$color-white-rgba-one: rgba(255, 255, 255, .6);
+$color-white-rgba-two: rgba(255, 255, 255, .8);
+
+//black
+$color-black-two: #242424;
+$color-black-three: #000000;
+
+//black-rgba
+$color-black-rgba: rgba(0, 0, 0, .25);
+$color-black-rgba-two: rgba(0, 0, 0, .6);
+$color-black-rgba-three: rgba(0, 0, 0, .4);
+$color-black-rgba-four: rgba(0, 0, 0, .5);
+
+//grey
+$color-grey-one: #7D838A;
+$color-grey-two: #F1F2F4;
+$color-grey-three: #797979;
+$color-grey-four: #585858;
+$color-grey-five: #C4C4C4;
+$color-grey-six: #CACACA;
+$color-grey-seven: #F5F7F9;
+$color-grey-eight: #EFEFEF;
+$color-grey-nine: #989ca8;
+$color-grey-ten: #e6e6e6;
+
+//grey-rgba
+$color-grey-rgba-one: rgba(121, 121, 121, 0.5);
+$color-grey-rgba-two: linear-gradient(180deg, #ECECEC 0%, #FFFFFF 47.51%, #ECECEC 100%), #F1F2F4;
+$color-grey-rgba-three: rgba(245, 247, 249, 0.7);
+$color-grey-rgba-four: rgba(239, 239, 239, 0.95);
+$color-grey-rgba-five: rgba(121, 121, 121, 0.5);
+
+//blue
+$blue-color-one: #282746;
+$blue-color-two: #263266;
+$blue-color-three: #484587;
+$blue-color-four: #232148;
+$blue-color-five: #282746;
+$blue-color-six: #192048;
+$blue-color-seven: #273269;
+
+//blue-rgba
+$blue-rgba-one: linear-gradient(0deg, #263266, #263266);
+$blue-rgba-two: rgba(38, 50, 102, 0.5);
+
+//orange
+$orange-color-one: #FF9900;
+
+//orange-rgba
+$orange-color-one-rgba: rgba(255, 153, 0, 0.6);
+
+//url and src
+
+$way-img: "../img" !default;
+
+
+@mixin flex-center {
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+
+}
+
+@mixin inline-flex-center-nowrap {
+
+  display: inline-flex;
+  align-items: center;
+  align-content: center;
+
+}
+
+.title-line {
+
+  &:after {
+
+    content: '';
+    display: block;
+    position: relative;
+    width: 80px;
+    border: 2px solid $blue-color-seven;
+    margin: 25px auto 0;
+
+  }
+
+}
+
+.blue-text-color {
+
+  color: $blue-color-seven;
+
+}
+
+.white-text-color {
+
+  color: #ffffff;
+
+}
+
+.blue-bg {
+
+  background: $blue-color-one;
+  width: 100%;
+  display: flex;
+  margin-bottom: 10px;
+  @include flex-center();
+
+  &__after {
+
+    &:before {
+
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      height: calc(100%/1.2);
+      width: 100%;
+      left: 0;
+      background: $blue-color-one;
+      z-index: -1;
+
+    }
+
+    &:after {
+
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: 0;
+      height: calc(100%/2.6);
+      width: 100%;
+      left: 0;
+      background: $color-grey-eight;
+      z-index: -1;
+
+    }
+
+  }
+
+}
+
+.grey-bg {
+
+  background: $color-grey-eight;
+  width: 100%;
+  display: flex;
+
+}
+
+.white-color {
+
+  color: $color-white !important;
+
+}
+
+.red-button {
+
+  background: $color-black-three !important;
+  transition: all .5s ease-in-out;
+
+  &:hover {
+
+    transform: translateY(4px) scale(1.02);
+    box-shadow: 0 -4px 17px 0 $color-black-rgba-four;
+    color: $color-white;
+
+  }
+
+}
+
+.orange-button {
+
+  background: $color-black-three !important;
+  transition: all .5s ease-in-out;
+
+  &:hover {
+
+    transform: translateY(4px) scale(1.02);
+    box-shadow: 0 -4px 17px 0 $color-black-rgba-four;
+    color: $color-white;
+
+  }
+
+}
+
+
+
+.button {
+
+  &__shadow {
+
+    &_left {
+
+      box-shadow: -2px 2px 2px $color-black-rgba-three;
+      transition: all .5s ease;
+
+      &:hover {
+
+        transform: translateY(-4px) scale(1.02);
+        box-shadow: -13px 20px 27px $color-black-rgba-four;
+
+      }
+
+    }
+
+    &_center {
+
+      box-shadow: 0 2px 2px $color-black-rgba-three;
+      transition: all .5s ease;
+
+      &:hover {
+
+        transform: translateY(-4px) scale(1.02);
+        box-shadow: 0 20px 27px $color-black-rgba-four;
+
+      }
+
+    }
+
+    &_right {
+
+      box-shadow: 2px 2px 2px $color-black-rgba-three;
+      transition: all .5s ease;
+
+      &:hover {
+
+        transform: translateY(-4px) scale(1.02);
+        box-shadow: 13px 20px 27px $color-black-rgba-four;
+
+      }
+
+    }
+
+  }
+
+  &__theme {
+
+    padding: 20px 0;
+    width: 100%;
+    text-transform: uppercase;
+    color: $color-white;
+    display: block;
+    position: relative;
+    text-align: center;
+    text-decoration: none !important;
+
+  }
+
+  &__content {
+
+    background: $color-black-three;
+    padding: 7px 27px;
+    display: flex;
+    color: $color-white;
+    align-items: center;
+    align-content: center;
+    box-sizing: border-box;
+    transition: all .3s ease-in-out;
+    border-radius: 0 !important;
+    margin: auto;
+    border: none;
+    z-index: 10000;
+    position: relative;
+    cursor: pointer;
+    text-transform: uppercase;
+
+    &:hover {
+
+      color: $color-white;
+
+    }
+
+    svg {
+
+      margin-right: 15px;
+      margin-top: 3px;
+
+    }
+
+    &_size {
+
+      padding: 17px 35px;
+
+    }
+
+  }
+
+}
+
+
+@-webkit-keyframes animated-map {
+
+  50% {
+
+    fill-opacity: 1;
+    fill: $color-black-three;
+    stroke-width: 50;
+    stroke: $color-black-three;
+    stroke-opacity: .5;
+
+  }
+
+}
+
+@keyframes animated-map {
+
+  50% {
+
+    fill-opacity: 1;
+    fill: $color-black-three;
+    stroke-width: 50;
+    stroke: $color-black-three;
+    stroke-opacity: .5;
+
+  }
+
+}
+
+.svg__map {
+
+  path {
+
+    animation: animated-map;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    stroke-width: 0;
+    stroke: $color-white-rgba-one;
+
+    &:nth-child(150) {
+
+      animation-duration: 3s;
+      animation-delay: 3s;
+
+    }
+
+    &:nth-child(190) {
+
+      animation-duration: 3s;
+      animation-delay: 4.2s;
+
+    }
+
+    &:nth-child(290) {
+
+      animation-duration: 3s;
+      animation-delay: 3.6s;
+
+    }
+
+    &:nth-child(320) {
+
+      animation-duration: 3s;
+      animation-delay: 6.4s;
+
+    }
+
+
+    &:nth-child(505) {
+
+      animation-duration: 3s;
+      animation-delay: 3.5s;
+
+    }
+
+    &:nth-child(535) {
+
+      animation-duration: 4.3s;
+      animation-delay: 5.5s;
+
+    }
+
+    &:nth-child(630) {
+
+      animation-duration: 6.3s;
+      animation-delay: 6.89s;
+
+    }
+
+    &:nth-child(690) {
+
+      animation-duration: 5.3s;
+      animation-delay: 6s;
+
+    }
+
+    &:nth-child(705) {
+
+      animation-duration: 3s;
+      animation-delay: 7.9s;
+
+    }
+
+    &:nth-child(772) {
+
+      animation-duration: 3s;
+      animation-delay: 8.9s;
+
+    }
+
+    &:nth-child(810) {
+
+      animation-duration: 4.3s;
+      animation-delay: 9.5s;
+
+    }
+
+    &:nth-child(830) {
+
+      animation-duration: 5.3s;
+      animation-delay: 7.8s;
+
+    }
+  }
+}
+
+.z-index {
+
+  &_3000 {
+
+    z-index: 3000;
+
+  }
+
+  &_2000 {
+
+    z-index: 2000;
+
+  }
+
+  &_1000 {
+
+    z-index: 1000;
+
+  }
+
+  &_999 {
+
+    z-index: 999 !important;
+
+  }
+
+  &_1 {
+
+    z-index: 1 !important;
+
+  }
+
+}
+
+.old {
+
+  &__price {
+
+    &:before {
+
+      content: '';
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background: $color-black-three;
+      top: 50%;
+      transform: translateY(-50%);
+
+    }
+
+  }
+
+}
+
+
+.navbar {
+
+  box-shadow: none;
+
+}
+
+.waves-effect {
+
+  overflow: visible;
+
+}
+
+.navbar {
+
+  .dropdown-toggle {
+
+    &:active, &:focus {
+
+      background-color: transparent !important;
+
+    }
+
+  }
+
+  .dropdown-menu {
+
+    box-shadow: 0 1px 3rem rgba(0, 0, 0, .7) !important;
+
+    a {
+
+      color: $color-grey-one;
+      transition: all .3s ease;
+
+    }
+
+    .dropdown-item {
+
+      padding: 0;
+
+    }
+
+  }
+
+
+  &.navbar-light {
+
+    .navbar-nav {
+
+      .nav-link {
+
+        height: auto !important;
+
+        &:hover {
+
+          text-decoration: none !important;
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+
+.dropdown {
+
+  .dropdown-menu {
+
+    padding: 0;
+
+    .dropdown-item:hover {
+
+      box-shadow: none;
+      border-radius: 0;
+      transition: none;
+
+    }
+
+  }
+
+}
+
+.dropdown-menu .dropdown-item {
+
+  line-height: 1em !important;
+
+}
+
+.the-arrow {
+
+  width: 40px;
+  transition: all 0.2s;
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  top: 0;
+  margin-top: 2rem;
+
+  &__position {
+
+    position: relative;
+    margin: 0 0 0 20px;
+    right: auto;
+
+  }
+
+  > .arrow-right {
+
+    background-color: $color-black-three;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: all 0.5s;
+    will-change: transform;
+    border-radius: 10px;
+
+    &::before, &::after {
+
+      background-color: $color-black-three;
+      content: '';
+      display: block;
+      height: 2px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      transition: all 0.2s;
+      transition-delay: 0s;
+      border-radius: 10px;
+
+    }
+
+    &::before {
+
+      transform-origin: top right;
+
+    }
+
+
+    &::after {
+
+      transform-origin: bottom right;
+
+    }
+
+  }
+
+  > .shaft {
+    background-color: $color-white;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: all 0.5s;
+    will-change: transform;
+    border-radius: 10px;
+
+    &::before, &::after {
+
+      background-color: $color-white;
+      content: '';
+      display: block;
+      height: 2px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      transition: all 0.2s;
+      transition-delay: 0s;
+      border-radius: 10px;
+
+    }
+
+    &::before {
+
+      transform-origin: top right;
+
+    }
+
+
+    &::after {
+
+      transform-origin: bottom right;
+
+    }
+
+  }
+
+  &.-right {
+
+    z-index: 1000;
+
+    > .shaft, .arrow-right {
+
+      width: 25px;
+
+      &::before, &::after {
+
+        width: 10px;
+        transition: all 0.5s;
+
+      }
+
+      &::before {
+
+        transform: rotate(40deg);
+
+      }
+
+      &::after {
+
+        transform: rotate(-40deg);
+
+      }
+
+    }
+
+  }
+
+}
+
+.navbar {
+
+  &.navbar-light {
+
+    .navbar-nav {
+
+      .nav-item {
+
+        .nav-link {
+
+          color: $color-white;
+          padding: 0;
+
+          &:hover {
+
+            color: $color-white;
+
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+.box-shadow {
+
+  &__avatar {
+
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+
+  }
+
+}
+
+input[disabled] {
+
+  background: $color-grey-rgba-five;
+  color: $blue-rgba-two;
+  box-shadow: none;
+
+}
+
+

@@ -1,0 +1,190 @@
+$font-path: "../fonts" !default;
+
+@font-face {
+  font-family: ArimoBold;
+  src: url("#{$font-path}/ArimoBold.ttf")
+}
+
+@font-face {
+  font-family: ArimoRegular;
+  src: url("#{$font-path}/ArimoRegular.ttf")
+}
+
+@font-face {
+  font-family: Montserrat;
+  src: url("#{$font-path}/Montserrat.ttf")
+}
+
+@font-face {
+  font-family: MontserratBold;
+  src: url("#{$font-path}/MontserratBold.ttf")
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+html {}
+
+body {
+
+  margin: 0;
+  font-size: 16px;
+  font-family: 'ArimoRegular', sans-serif;
+
+  &.modal-open {
+
+    overflow: hidden;
+    padding-right: 17px;
+
+    @media only screen and (min-width: 0) and (max-width: 991.98px) {
+
+      padding-right: 1px;
+
+    }
+  }
+}
+
+a {
+  text-decoration: none;
+  outline: none;
+  color: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6, li {
+  margin: 0;
+  line-height: 1.5em;
+}
+
+a, p, button {
+
+  font-family: 'ArimoRegular', sans-serif;
+  line-height: 1.5em;
+
+}
+
+h1, h2, h4 {
+
+  font-family: 'ArimoBold', sans-serif;
+
+}
+
+h1 {
+
+  color: $color-white;
+  font-size: 40px;
+  line-height: 1.5em;
+
+  @include media-breakpoint-down(sm) {
+
+    font-size: 30px;
+    text-align: center;
+
+  }
+
+  @media only screen and (max-width: 320px) {
+
+    word-break: break-all;
+
+  }
+
+}
+
+h2 {
+
+  color: $blue-color-seven;
+  line-height: 1.5em;
+
+  @include media-breakpoint-down(sm) {
+
+    font-size: 30px;
+    text-align: center;
+
+  }
+
+  @media only screen and (max-width: 400px) {
+
+    font-size: 25px;
+    text-align: center;
+
+  }
+
+  @media only screen and (max-width: 320px) {
+
+    word-break: break-all;
+
+  }
+
+}
+
+h4 {
+
+  font-family: 'ArimoRegular', sans-serif;
+
+}
+
+h5 {
+
+  font-family: 'ArimoRegular', sans-serif;
+
+}
+
+p {
+
+  font-size: 20px;
+
+}
+
+span {
+
+  font-family: 'ArimoRegular', sans-serif;
+
+}
+
+ul, ol, figure {
+  padding: 0;
+  line-height: 100%;
+  margin: 0;
+}
+
+li {
+  list-style-type: none;
+  font-family: 'ArimoRegular', sans-serif;
+}
+
+
+input:active,
+input:focus,
+a:active,
+a:focus {
+  outline: none;
+}
+
+img, a {
+  border: none;
+}
+
+.font-md {
+
+  font-size: 16px;
+
+}
+
+.font-lg {
+
+  font-size: 20px;
+
+}
+
+//$owl-image-path: "../img/home/" !default;
+//
+//.owl-carousel {
+//
+//  .owl-video-play-icon {
+//
+//    background: url("#{$owl-image-path}owl.video.play.png") no-repeat !important;
+//
+//  }
+//
+//}

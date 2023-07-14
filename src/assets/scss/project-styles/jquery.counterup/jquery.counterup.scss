@@ -1,0 +1,24 @@
+.counter {
+
+  &__theme {
+
+    position: relative;
+    border: none;
+    background: transparent;
+    margin-left: 0;
+    padding: 0;
+    box-shadow: none;
+    color: $blue-color-three;
+    font-size: 55px;
+    letter-spacing: 0.05em;
+    font-family: 'ArimoBold', sans-serif;
+
+    @include media-breakpoint-down(sm) {
+
+      font-size: 40px;
+
+    }
+
+  }
+
+}

@@ -1,0 +1,44 @@
+.lb-cancel {
+  background: url('/assets/img/lightbox/loading.gif') no-repeat;
+}
+.lb-nav {
+  a.lb-prev {
+    background: url('/assets/img/lightbox/prev.png') left 48% no-repeat;
+  }
+  a.lb-next {
+    background: url('/assets/img/lightbox/next.png') right 48% no-repeat;
+  }
+}
+.lb-data {
+  .lb-close {
+    background: url('/assets/img/lightbox/close.png') top right no-repeat;
+  }
+}
+
+.lightbox {
+
+  .lb-image {
+    position: relative;
+    border-radius: 0;
+    border: 40px solid #fff;
+    border-image: url('/assets/img/content/message/frame.png') 70 stretch;
+
+  }
+
+}
+
+.lb-container {
+
+  position: relative;
+
+}
+
+
+.lb-outerContainer {
+
+  border: 0;
+  border-radius: 0;
+  background-color: transparent;
+  position: relative;
+
+}

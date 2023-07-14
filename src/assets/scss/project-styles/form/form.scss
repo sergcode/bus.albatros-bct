@@ -1,0 +1,119 @@
+.form {
+  padding-right: 20px;
+
+  @media only screen and (max-width: 300px) {
+    padding-right: 0;
+  }
+
+  .line-1 {
+
+    margin-bottom: 15px;
+
+    @include media-breakpoint-down(md) {
+
+      width: 50%;
+      display: flex;
+
+    }
+
+    @include media-breakpoint-down(sm) {
+
+      width: inherit;
+      display: block;
+
+    }
+
+    &:nth-child(2) {
+
+      @include media-breakpoint-down(md) {
+
+        padding-right: 15px;
+
+      }
+
+      @include media-breakpoint-down(sm) {
+
+        padding-right: 0;
+
+      }
+
+    }
+
+    label {
+
+      display: none;
+
+    }
+
+    input {
+
+      width: 100%;
+      background: transparent;
+      border: 1px solid $color-white;
+      font-family: 'ArimoRegular', sans-serif;
+      font-size: 16px;
+      color: $color-white;
+
+    }
+
+    ::-webkit-input-placeholder {
+      color: $color-white;
+      font-family: 'ArimoRegular', sans-serif;
+      font-size: 16px;
+    }
+
+    ::-moz-placeholder {
+      color: $color-white;
+      font-family: 'ArimoRegular', sans-serif;
+      font-size: 16px;
+    }
+
+    :-moz-placeholder {
+      color: $color-white;
+      font-family: 'ArimoRegular', sans-serif;
+      font-size: 16px;
+    }
+
+    :-ms-input-placeholder {
+      color: $color-white;
+      font-family: 'ArimoRegular', sans-serif;
+      font-size: 16px;
+    }
+
+  }
+
+  .line-4 {
+
+    @include media-breakpoint-down(md) {
+
+      width: 100%;
+
+    }
+
+    @include media-breakpoint-down(sm) {
+
+      width: inherit;
+
+    }
+
+  }
+
+  &__theme {
+
+    @include media-breakpoint-down(md) {
+
+      display: flex;
+      flex-wrap: wrap;
+
+    }
+
+    @include media-breakpoint-down(sm) {
+
+      display: block;
+      flex-wrap: nowrap;
+
+    }
+
+  }
+
+}

@@ -1,0 +1,81 @@
+mixin tariffs(classauto, places, cost, car, modelauto, button, delay)
+  .col-sm-12.col-lg-4.mb-4
+    .tariffs-block(class!= attributes.class, data-wow-delay!= delay)
+      p.tariffs-block__title= classauto
+      p.tariffs-block__small-text= places
+      p.tariffs-block__cost= cost
+      .tariffs-block__img-car
+        img(src=car, alt='')
+      p.tariffs-block__small-text.mb-3!= modelauto
+      a.button.button__md_orange.mt-auto(href='#showquiz', data-title-form="Заказ автобуса" data-form="Заказ автобуса")= button
+
+
++tariffs(
+  'МИКРОАВТОБУС',
+  '8-10 мест',
+  'от 2000 руб.',
+  '/assets/img/tariffs/car_1.png',
+  'Volkswagen Multivan <br/> Hyundai Grand Starex<br/> и подобные',
+  'Заказать'
+
+)(class="button__shadow_left wow fadeInUp")
+
+
++tariffs(
+  'Автобус',
+  '11-15 мест',
+  'от 2000 руб.',
+  '/assets/img/tariffs/car_2.png',
+  'Fiat Ducato<br> Toyota Hiace<br> и подобные',
+  'Заказать',
+  '0.3s'
+
+)(class="button__shadow_center wow fadeInUp")
+
+
++tariffs(
+  'Автобус',
+  '16-18 мест',
+  'от 2000 руб.',
+  '/assets/img/tariffs/car_3.png',
+  'Ford Transit<br> Citroen Jumper<br> и подобные',
+  'Заказать',
+  '0.5s'
+)(class="button__shadow_right wow fadeInUp")
+
+
++tariffs(
+  'Автобус',
+  '19-21 мест',
+  'от 2000 руб.',
+  '/assets/img/tariffs/car_4.png',
+  'Mercedes Sprinter<br> Volkswagen Crafter<br> и подобные',
+  'Заказать',
+  '0.7s'
+
+)(class="button__shadow_left wow fadeInUp")
+
+
++tariffs(
+  'Автобус',
+  '32-35 мест',
+  'от 2000 руб.',
+  '/assets/img/tariffs/car_5.png',
+  'Hyundai AeroTown<br> KIA Cosmos<br> и подобные',
+  'Заказать',
+  '0.9s'
+)(class="button__shadow_center wow fadeInUp")
+
+
++tariffs(
+  'Автобус',
+  '45+ мест',
+  'от 2000 руб.',
+  '/assets/img/tariffs/car_6.png',
+  'SangYong Transtar<br> Kia Grandbird<br> и подобные',
+  'Заказать',
+  '1.1s'
+)(class="button__shadow_right wow fadeInUp")
+
+
+

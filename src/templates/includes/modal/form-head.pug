@@ -1,0 +1,24 @@
+#modalSubscriptionForm.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
+  .modal-dialog.modal-dialog-centered(role='document')
+    .modal-content
+      .modal-header.text-center
+        h4.modal-title.w-100.font-weight-bold Subscribe
+        button.close(type='button', data-dismiss='modal', aria-label='Close')
+          span(aria-hidden='true') ×
+      .modal-body.mx-3
+        .md-form.mb-5
+          i.fas.fa-user.prefix.grey-text
+          input#form3.form-control.validate(type='text')
+          label(data-error='wrong', data-success='right', for='form3') Your name
+        .md-form.mb-4
+          i.fas.fa-envelope.prefix.grey-text
+          input#form2.form-control.validate(type='email')
+          label(data-error='wrong', data-success='right', for='form2') Your email
+      .modal-footer.d-flex.justify-content-center
+        button.btn.btn-indigo
+          | Send
+          i.fas.fa-paper-plane-o.ml-1
+.text-center
+  a.btn.btn-default.btn-rounded.mb-4(href='', data-toggle='modal', data-target='#modalSubscriptionForm')
+    | Launch
+    | Modal Subscription Form
